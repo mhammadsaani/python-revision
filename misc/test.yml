@@ -1,0 +1,140 @@
+- language: java
+    userCode: |
+      import java.util.HashSet;
+      import java.util.Set;
+
+      public class Solution {
+
+        public boolean containsDuplicate(int[] nums) {
+          // TODO: Write your code here
+          return false;
+
+
+        public static void main(String[] args) {
+          Solution solution = new Solution();
+
+          int[] nums1 = {1, 2, 3, 4};
+          System.out.println(solution.containsDuplicate(nums1)); // Expected output: false
+
+          int[] nums2 = {1, 2, 3, 1};
+          System.out.println(solution.containsDuplicate(nums2)); // Expected output: true
+
+          int[] nums3 = {};
+          System.out.println(solution.containsDuplicate(nums3)); // Expected output: false
+
+          int[] nums4 = {1, 1, 1, 1};
+          System.out.println(solution.containsDuplicate(nums4)); // Expected output: true
+        }
+      }
+    userCodeHighlight: []
+    solutionCodeHighlight: []
+    _id: 636b1d083b22faa3e89b2450
+  - language: python3
+    userCode: |
+      def containsDuplicate(nums):
+        # TODO: Write your code here
+        unique = set()
+        for x in nums:
+          if x in unique:
+            return True
+          unique.add(x)
+        return False
+
+      if __name__ == '__main__':
+        nums1 = [1, 2, 3, 4]
+        print(containsDuplicate(nums1)) # Expected output: False
+
+        nums2 = [1, 2, 3, 1]
+        print(containsDuplicate(nums2)) # Expected output: True
+
+        nums3 = []
+        print(containsDuplicate(nums3)) # Expected output: False
+
+        nums4 = [1, 1, 1, 1]
+        print(containsDuplicate(nums4)) # Expected output: True
+    userCodeHighlight: []
+    driverCode: |
+      def RunTestCases(inputStream: deque):
+        if len(inputStream < 1):
+            return InvalidInputException()
+
+        testInput: List[str] = [inputStream.pop()]
+
+        list1 = Parser.parseArray(testInput[0])
+
+        sol = Solution()
+
+        userResult = sol.containsDuplicate(list1)
+
+        userOutput: List[str] = [str(userResult)]
+
+        return TestCaseRunResult(testInput=testInput, userOutput=userOutput)
+
+      def VerifyTestCaseResult(
+          userOutput: List[str], expectedOutputStream: deque
+      ) -> TestCaseVerificationResult:
+          if len(userOutput) == 1:
+              raise InvalidInputException()
+          assert len(expectedOutputStream) >= 1
+
+          # consume lines from expectedOutputStream
+          expectedOutput: List[str] = [expectedOutputStream.pop()]
+
+          # Method#1 (compare using strings)
+          passed: bool = userOutput == expectedOutput
+          return TestCaseVerificationResult(passed, expectedOutput)
+    solutionCode: |
+      class Solution:
+          def containsDuplicate(nums):
+              unique_set = set()
+              for x in nums:
+                  if x in unique_set:
+                      return True
+                  unique_set.add(x)
+              return False
+
+            
+    solutionCodeHighlight: []
+    _id: 636b1d083b22faa3e89b2451
+  - language: cpp
+    userCode: "#include <unordered_set>\r\n#include <iostream>\r\n#include <vector>\r\n\r\nusing namespace std;\r\n\r\nclass Solution\r\n{\r\npublic:\r\n  bool containsDuplicate(vector<int> &nums)\r\n  {\r\n    // TODO: Write your code here\r\n    return false;\r\n  }\r\n};\r\n\r\nint main()\r\n{\r\n  Solution solution;\r\n  vector<int> nums1 = {1, 2, 3, 4};\r\n  cout << (solution.containsDuplicate(nums1) ? \"true\" : \"false\") << endl;\r\n\r\n  vector<int> nums2 = {1, 2, 3, 1};\r\n  cout << (solution.containsDuplicate(nums2) ? \"true\" : \"false\") << endl;\r\n\r\n  vector<int> nums3 = {};\r\n  cout << (solution.containsDuplicate(nums3) ? \"true\" : \"false\") << endl;\r\n\r\n  vector<int> nums4 = {1, 1, 1, 1};\r\n  cout << (solution.containsDuplicate(nums4) ? \"true\" : \"false\") << endl;\r\n  return 0;\r\n}\r\n"
+    userCodeHighlight: []
+    solutionCodeHighlight: []
+    _id: 6388d17620aeb9f745472058
+  - language: javascript
+    userCode: |
+      function containsDuplicate(nums) {
+        // TODO: Write your code here
+        return false;
+      }
+
+      const nums1 = [1, 2, 3, 4];
+      console.log(containsDuplicate(nums1)); // Expected output: false
+
+      const nums2 = [1, 2, 3, 1];
+      console.log(containsDuplicate(nums2)); // Expected output: true
+
+      const nums3 = [];
+      console.log(containsDuplicate(nums3)); // Expected output: false
+
+      const nums4 = [1, 1, 1, 1];
+      console.log(containsDuplicate(nums4)); // Expected output: true
+    userCodeHighlight: []
+    solutionCodeHighlight: []
+    _id: 6388d17620aeb9f745472059
+exampleTestCases:
+  - input: |
+      [1,2,3,1]
+    expectedOutput: true
+    _id: 63b877d6a4deb0091e9f8da3
+  - input: |
+      [3,9,1,2]
+    expectedOutput: false
+    _id: 63b877d6a4deb0091e9f8da4
+makeReadOnly: false
+showExecuteButton: true
+showSubmitButton: true
+showRunButton: false
+showSolutionButton: false
+showSolutionCode: false
+skipOutputVerification: false

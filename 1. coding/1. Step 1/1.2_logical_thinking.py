@@ -143,8 +143,95 @@ class Patterns:
         
     def pattern_18(self, n):
         for row in range(1, n+1):
-            print(string.ascii_uppercase[n - row])
+            for col in range(row, 0, -1):
+                print(string.ascii_uppercase[n - col], end="")
+            print()
 
+    def pattern_19(self, n):
+        for row in range(1, x:=2*n+1):
+            if row < x // 2 + 1:
+                for col in range(n + 1 - row):
+                    print("*", end="")
+                for col in range(2*(row-1)):
+                    print(" ", end="")
+                for col in range(n + 1 - row):
+                    print("*", end="")
+                print()
+            else:
+                for col in range(current_row:= row - n):
+                    print("*", end="")
+                for col in range(2*n - 2*(current_row)):
+                    print(" ", end="")
+                for col in range(current_row):
+                    print("*", end="")
+                print()
+                    
+    def pattern_20(self, n):
+        for row in range(1, 2*n):
+            if row < n + 1 :
+                for col in range(row):
+                    print("*", end="")
+                for col in range(2*n - 2*row):
+                    print(" ", end="")
+                for col in range(row):
+                    print("*", end="")
+                print()
+            else:
+                for col in range(2*n - row):
+                    print("*", end="")
+                for col in range(2*row - 2*n):
+                    print(" ", end="")
+                for col in range(2*n - row):
+                    print("*", end="")
+                print()
+                
+    def pattern_21(self, n):
+        first = False
+        last = False
+        for row in range(n):
+            if row == 0:
+                first = True
+            else:
+                first = False
+            if row == n - 1:
+                last = True
+            else:
+                last = False
+            
+            # for col in range()
+            if first or last:
+                for col in range(n):
+                    print("*", end="")
+                print()
+            else:
+                import math
+                for col in range(1):
+                    print("*", end="")
+                for col in range(math.ceil(n / 2)):
+                    print(" ", end="")
+                for col in range(1):
+                    print("*", end="")
+                print()
+                
+    def pattern_21_2(self, n):
+        for row in range(n):
+            for col in range(n):
+                if row == 0 or row == n - 1 or col == 0 or col == n - 1:
+                    print("*", end="")
+                else:
+                    print(" ", end="")
+            print()
+                
+    def pattern_22(self, n):
+        for row in range(2*n - 1):
+            for col in range(2*n - 1):
+                top = row
+                bottom = 2*n - 2 - row
+                left = col
+                right = 2*n - 2 - col
+                value = min(top, bottom, left, right)
+                print(n - value, end='')
+            print()
 
 pattern = Patterns()
-pattern.pattern_17(4)
+pattern.pattern_22(4)

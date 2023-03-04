@@ -30,5 +30,6 @@
 # import string
 # print(type(string.ascii_uppercase))
 
-
-print(11//2)
+import math
+print(11.8/2)
+print(int(11.8/2))

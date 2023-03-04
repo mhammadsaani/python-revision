@@ -232,6 +232,8 @@ class Patterns:
                 value = min(top, bottom, left, right)
                 print(n - value, end='')
             print()
+            
+    # print(f)
 
 pattern = Patterns()
 pattern.pattern_22(4)

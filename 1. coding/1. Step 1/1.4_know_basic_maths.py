@@ -29,10 +29,37 @@ class KnowBasicMath:
         temp_2 = temp[32:0:-1]
         return int(temp_2, 2)
     
+    def reverse_num(self, n: int) -> int:
+        reversed_num = 0
+        while(n != 0):
+            temp = n % 10
+            reversed_num = reversed_num * 10 + temp
+            n = n // 10
+        return reversed_num
     
+    def count_digits(self, n: int) -> int:
+        count = 0
+        while n != 0:
+            n = n // 10
+            count += 1            
+        return count
+    
+    def count_digits_2(self, n: int) -> int:
+        return len(str(n))
+
+    def is_palindrome(self, n: int) -> int:
+        reversed_num = self.reverse_num(n)
+        return reversed_num == n
+    
+    def is_palindrome_2(self, n: int) -> int:
+        reversed_num = str(n)
+        temp = len(reversed_num) 
+        reversed_num = reversed_num[temp::-1]
+        print(reversed_num)
+        return int(reversed_num) == n
     
 know_basic_math = KnowBasicMath()
-result = know_basic_math.reverse_bits(1)
+result = know_basic_math.is_palindrome_2(212)
 print(result)
 
 # 1000000000000000000000000000000

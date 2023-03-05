@@ -30,6 +30,17 @@
 # import string
 # print(type(string.ascii_uppercase))
 
-import math
-print(11.8/2)
-print(int(11.8/2))
+# import math
+# print(11.8/2)
+# print(int(11.8/2))
+
+a = [1,2,3]
+# a.insert(1, 'h')
+# print(a)
+# a.pop()
+# print(a)
+# print(dir(a))
+a.remove(2)
+for method in dir(a):
+    if 'copy' in method:
+        print(method, dir(a))

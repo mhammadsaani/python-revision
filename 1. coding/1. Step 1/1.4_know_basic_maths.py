@@ -1,3 +1,5 @@
+import math
+
 class KnowBasicMath:
     
     
@@ -57,10 +59,39 @@ class KnowBasicMath:
         reversed_num = reversed_num[temp::-1]
         print(reversed_num)
         return int(reversed_num) == n
+
+    def armstrong_number (self, n):
+        """
+        An Armstrong number of three digits is an integer such
+        that the sum of the cubes of its digits is equal to the
+        number itself.
+        """
+        temp = str(n)
+        result = 0
+        for i in temp:
+            result += int(i) ** 3
+            
+        return "Yes" if n == result else "No"
+    
+    def all_divisor(self, n):
+        print(1, end=" ")
+        for i in range(2, int(math.sqrt(n)) + 1):
+            if n % i == 0:
+                print(i, end=" ")
+                if (n // i != i):
+                    print(n // i, end=" ")
+    
+    def is_prime(self, n):
+        if n == 1:
+            return False
+        for x in range(1, y:=int(math.sqrt(n))):
+            print(y)
+            if n % x == 0:
+               return False
+        
+        return True
+                
     
 know_basic_math = KnowBasicMath()
-result = know_basic_math.is_palindrome_2(212)
+result = know_basic_math.all_divisor(36)
 print(result)
-
-# 1000000000000000000000000000000
-# 10000000000000000000000000000000

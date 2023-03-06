@@ -34,13 +34,27 @@
 # print(11.8/2)
 # print(int(11.8/2))
 
-a = [1,2,3]
-# a.insert(1, 'h')
-# print(a)
-# a.pop()
-# print(a)
-# print(dir(a))
-a.remove(2)
-for method in dir(a):
-    if 'copy' in method:
-        print(method, dir(a))
+# a = [1,2,3]
+# # a.insert(1, 'h')
+# # print(a)
+# # a.pop()
+# # print(a)
+# # print(dir(a))
+# a.remove(2)
+# for method in dir(a):
+#     if 'copy' in method:
+#         print(method, dir(a))
+
+
+# a = 0
+# if a == 1:
+#     print('this')
+# elif a == 10:
+#     print("that")
+# else:
+#     assert False, ("This should not happen but happening")
+
+temp_list = [1,
+             2]
+print(temp_list.append(3))
+print(temp_list)

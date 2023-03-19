@@ -54,7 +54,50 @@
 # else:
 #     assert False, ("This should not happen but happening")
 
-temp_list = [1,
-             2]
-print(temp_list.append(3))
-print(temp_list)
+# class Solution:
+#     def moveZeroes(self, nums) -> None:
+#         for idx, value in enumerate(nums):
+#             if value == 0:
+#                 nums.pop(idx)
+#                 nums.append(0)
+#                 print(nums)
+
+#         return nums
+
+
+# sol = Solution()
+# sol.moveZeroes([0,1,0])
+
+
+# class Solution:
+#     def factorialNumbers(self, N):
+#         for i in range(1, N + 1):
+#             value = self.find_factorial(i)
+#             if value <= N:
+#                 print(value, end=" ")
+#             else:
+#                 return
+
+#     def find_factorial(self, num):
+#         res = 1
+#         for i in range(1, num + 1):
+#             res *= i
+#         return res
+
+
+# sol = Solution()
+# sol.factorialNumbers(25)
+
+
+def long_function_with_x_args(
+    aaaaaaaaaaaaaaa,
+    bbbbbbbbbbbbbbbbbbbbbb,
+    ccccccccccccccccccc,
+    dddddddddddddddddd,
+    eeeeeeeeeeeee,
+):
+    pass
+
+
+# print(chr(92))
+# print(66%57)

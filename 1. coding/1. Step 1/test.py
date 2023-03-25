@@ -89,15 +89,17 @@
 # sol.factorialNumbers(25)
 
 
-def long_function_with_x_args(
-    aaaaaaaaaaaaaaa,
-    bbbbbbbbbbbbbbbbbbbbbb,
-    ccccccccccccccccccc,
-    dddddddddddddddddd,
-    eeeeeeeeeeeee,
-):
-    pass
+# def long_function_with_x_args(
+#     aaaaaaaaaaaaaaa,
+#     bbbbbbbbbbbbbbbbbbbbbb,
+#     ccccccccccccccccccc,
+#     dddddddddddddddddd,
+#     eeeeeeeeeeeee,
+# ):
+#     pass
 
 
 # print(chr(92))
 # print(66%57)
+
+print(hash('\0B'))
